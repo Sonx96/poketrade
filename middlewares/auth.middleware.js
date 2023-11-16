@@ -21,7 +21,7 @@ function isLoggedIn(req, res, next) {
     if (req.session.user.role === "admin") {
       next() // continua con la ruta porque eres un admin
     } else {
-      res.redirect("/auth/login") // fuera de aqui porque no eres un admin
+      res.redirect("/") // fuera de aqui porque no eres un admin
     }
   
   }
