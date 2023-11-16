@@ -64,3 +64,65 @@ h1 {
   /* Para indicar que los campos no son editables */
   cursor: not-allowed;
 }
+
+
+
+.custom-container {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.custom-container::before,
+.custom-container::after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  top: -10px;
+  z-index: -1;
+}
+
+.custom-container::before {
+  top: -1px;
+}
+
+.custom-container::after {
+  bottom: -1px;
+}
+
+.custom-container hr {
+  display: none; /* Ocultamos las líneas horizontales por defecto */
+}
+
+
+/*details*/
+.custom-wrapper {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.custom-wrapper::before,
+.custom-wrapper::after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  top: -10px;
+  z-index: -1;
+}
+
+.custom-wrapper::before {
+  top: -1px;
+}
+
+.custom-wrapper::after {
+  bottom: -1px;
+}
+
+.custom-box {
+  display: none; /* Ocultar líneas horizontales por defecto */
+}

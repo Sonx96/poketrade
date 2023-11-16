@@ -26,6 +26,33 @@
           <!-- <a href="/book/{{this.oneCard._id}}/edit" class="btn btn-primary">Edit</a> -->
         </div>
       </div>
+
+        <div class="container">
+          <div class="custom-wrapper">
+            <form class="px-4 py-4">
+              <div class="mb-3">
+                {{#each this.offersArr}}
+                <div class="custom-box border mb-3 p-3"> <!-- Contenedor con borde -->
+                  <div class="mb-3 border-bottom pb-2"> <!-- Separador entre cada dato -->
+                    <p class="mb-0">Seller: {{this.seller.name}}</p>
+                  </div>
+                  <div class="mb-3 border-bottom pb-2"> <!-- Separador entre cada dato -->
+                    <p class="mb-0">Quantity: {{this.quantity}}</p>
+                  </div>
+                  <div class="border-bottom pb-2"> <!-- Último separador sin margen inferior -->
+                    <p class="mb-0">Price: {{this.price}}</p>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </form>
+            <hr class="custom-box"> <!-- Línea horizontal (oculta por CSS) -->
+          </div>
+        </div>
+        
+      </div>
+
+
     </div>
   </div>
 </div>
@@ -75,12 +102,4 @@
       <button>Ir a editar</button>
     </a> --}}
 
-  {{#each this.offersArr}}
-
-  {{!-- <p>{{this.card}} --}}
-  <p>{{this.seller}}
-  <p>{{this.quantity}}
-  <p>{{this.price}}
-    
-
-  {{/each}}
+  
